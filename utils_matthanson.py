@@ -24,6 +24,9 @@ Here's what a first draft of my utils_case.py might look like:
 I'll test it in an online interpreter to ensure this version runs correctly before continuing.
 '''
 
+# Import statistics to use for mean, mode, median and stdev
+import statistics
+
 #####################################
 # Declare a global variables, ending with a blank f-string named byline.
 #####################################
@@ -39,6 +42,17 @@ skills_offered: list = ['Data analytics', 'Machine learning', 'Content creation'
 
 # List of floats for client satisfaction scores
 client_satisfaction_scores: list = [4.8, 4.6, 3.2, 2.8, 5.0]
+
+###########################################################
+# Calculate statistics BEFORE declaring byline variable
+###########################################################
+
+# Calculate basic stats
+min_score: float = min(client_satisfaction_scores)
+max_score: float = max(client_satisfaction_scores)
+mean_score: float = statistics.mean(client_satisfaction_scores)
+stdev_score: float = statistics.stdev(client_satisfaction_scores)
+
 
 byline: str = f"""
 ------------------------------------------------------
