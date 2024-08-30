@@ -25,10 +25,30 @@ I'll test it in an online interpreter to ensure this version runs correctly befo
 '''
 
 #####################################
-# Declare a global variable named byline.
+# Declare a global variables, ending with a blank f-string named byline.
 #####################################
 
-byline: str = 'Hanson Analytics: Delivering Professional Insights'
+# Boolean for whether company has international clients
+has_international_clients: bool = True
+
+# Integer for number of years in operation
+years_operating: int = 12
+
+# List of strings representing different services and capabilities offered by company
+skills_offered: list = ['Data analytics', 'Machine learning', 'Content creation', 'Data visualizations']
+
+# List of floats for client satisfaction scores
+client_satisfaction_scores: list = [4.8, 4.6, 3.2, 2.8, 5.0]
+
+byline: str = f"""
+------------------------------------------------------
+   Hanson Analytics: Delivering Actionable Insights
+------------------------------------------------------
+Has international clients: {has_international_clients}
+Years in business: {years_operating}
+Skills offered: {skills_offered}
+Client Scores: {client_satisfaction_scores}
+"""
 
 #####################################
 # Define a main() function for this module.
