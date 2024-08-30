@@ -43,9 +43,17 @@ byline: str = 'Hanson Analytics: Delivering Professional Insights'
 # so there's nothing needed inside the parentheses.
 # Everything afer the colon (:) must be indented (usually 4 spaces)
 
+#####################################
+# Create a function to getbyline as a string.
+#####################################
+
+def getbyline() -> str:
+   '''Return byline variable.'''
+   return byline
+
 def main() -> None:
     '''Print the byline to the console when this function is called.'''
-    print(byline)
+    print(getbyline())
 
 #####################################
 # Conditional Execution - Only call main() when executing this module as a script.
