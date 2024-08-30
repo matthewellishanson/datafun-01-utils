@@ -22,6 +22,8 @@ Here's what a first draft of my utils_case.py might look like:
    this script is executed directly (but not when I import it into another file).
 
 I'll test it in an online interpreter to ensure this version runs correctly before continuing.
+
+Note that much of this code was based off starter code provided by the instructor of my course, but will gradually evolve and take shape according to my own modifications as we move forward through this seven week course. 
 '''
 
 # Import statistics to use for mean, mode, median and stdev
@@ -43,16 +45,23 @@ skills_offered: list = ['Data analytics', 'Machine learning', 'Content creation'
 # List of floats for client satisfaction scores
 client_satisfaction_scores: list = [4.8, 4.6, 3.2, 2.8, 5.0]
 
+# List of floats for estimated values added to clients
+valueadded_scores = [4.2, 4.5, 5.0, 2.1, 2.8]
+
 ###########################################################
 # Calculate statistics BEFORE declaring byline variable
 ###########################################################
 
 # Calculate basic stats
-min_score: float = min(client_satisfaction_scores)
-max_score: float = max(client_satisfaction_scores)
-mean_score: float = statistics.mean(client_satisfaction_scores)
-stdev_score: float = statistics.stdev(client_satisfaction_scores)
+min_satisfaction_score: float = min(client_satisfaction_scores)
+max_satisfaction_score: float = max(client_satisfaction_scores)
+mean_satisfaction_score: float = statistics.mean(client_satisfaction_scores)
+stdev_satisfaction_score: float = statistics.stdev(client_satisfaction_scores)
 
+min_value_score: float = min(valueadded_scores)
+max_value_score: float = max(valueadded_scores)
+mean_value_score: float = statistics.mean(valueadded_scores)
+stdev_value_score: float = statistics.stdev(valueadded_scores)
 
 byline: str = f"""
 ------------------------------------------------------
@@ -61,7 +70,16 @@ byline: str = f"""
 Has international clients: {has_international_clients}
 Years in business: {years_operating}
 Skills offered: {skills_offered}
-Client Scores: {client_satisfaction_scores}
+Client Satisfaction Scores: {client_satisfaction_scores}
+Value Added Scores: {valueadded_scores}
+Min Satisfaction Score: {min_satisfaction_score}
+Max Satisfaction Score: {max_satisfaction_score}
+Mean Satisfaction Score: {mean_satisfaction_score}
+Satisfaction Score Standard Deviation: {stdev_satisfaction_score}
+Min Value Added Score: {min_value_score}
+Max Value Added Score: {max_value_score}
+Mean Value Added Score: {mean_value_score}
+Value Added Score Standard Deviation: {stdev_value_score}
 """
 
 #####################################
